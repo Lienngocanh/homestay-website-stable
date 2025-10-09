@@ -9,6 +9,7 @@ export const rooms: Room[] = [
     slug: "doi-can-hard",
     // price: 0, // Hidden price
     images: [
+      "/images/rooms/hard/ghard.jpg",
       "/images/rooms/hard/z7086470416479_0182b2f7087f31dfdff41b8c8701c3ec.jpg",
       "/images/rooms/hard/z7086470442832_06c71476d1e87c842d3e2e7ce43d8d18.jpg",
     ],
@@ -42,6 +43,7 @@ export const rooms: Room[] = [
     slug: "doi-can-soft",
     // price: 0,
     images: [
+      "/images/rooms/soft/gsoft.jpg",
       "/images/rooms/soft/z7086472479420_f7c43e22b7df2dc178edd0ab6cd9f4b1.jpg",
       "/images/rooms/soft/z7086471886130_39548f1c1a7ae965692f17a72631fb5f.jpg",
       "/images/rooms/soft/z7086470442834_6eb4fb302d5a7f61888c826f597a3cfc.jpg",
@@ -78,6 +80,7 @@ export const rooms: Room[] = [
     slug: "kim-ma-lya02", 
     // price: 0,
     images: [
+      "/images/rooms/lya02/g02.jpg",
       "/images/rooms/lya02/z7086469947047_f45795edb7cf5785689c3c8c46a95ee3.jpg",
       "/images/rooms/lya02/z7086470019234_81c1ea347c57280bd5a61bcf63c3a32b.jpg",
       "/images/rooms/lya02/z7086470044715_7e3789e180f50abe4a7c9b88717df94b.jpg",
@@ -113,6 +116,7 @@ export const rooms: Room[] = [
     slug: "kim-ma-lya03",
     // price: 0,
     images: [
+      "/images/rooms/lya03/g03.jpg",
       "/images/rooms/lya03/z7086460261350_4875c12f810d2af7c53f96db6cb3886a.jpg",
       "/images/rooms/lya03/z7086463851486_372762578137b3334b71a189ba3a1e4a.jpg",
       "/images/rooms/lya03/z7086464061775_eb408d9e02e7c124c2f8efbde7b220e1.jpg",
@@ -150,6 +154,7 @@ export const rooms: Room[] = [
     slug: "kim-ma-lya04",
     // price: 0,
     images: [
+      "/images/rooms/lya04/g04.jpg",
       "/images/rooms/lya04/z7086458187293_9087436573d4ab1616e2d5aa259eba3f.jpg",
       "/images/rooms/lya04/z7086458994712_51d2c1053901ab758361a06887612331.jpg",
       "/images/rooms/lya04/z7086460498873_d1754953ffa5866ca2fb44be9dcff4c3.jpg",
@@ -188,6 +193,7 @@ export const rooms: Room[] = [
     slug: "thinh-hao-ban-cong",
     // price: 0,
     images: [
+      "/images/rooms/bancong/gBC.jpg",
       "/images/rooms/bancong/z7086471150651_d2634e5cb7cad0106dd319adebf9a824.jpg",
       "/images/rooms/bancong/z7086474242650_72d28df82e22d2995c187a3ea3bdfa85.jpg",
       "/images/rooms/bancong/z7086474242806_82c49ed09a21a552fcc3bc2737d325d5.jpg",
@@ -234,6 +240,7 @@ export const rooms: Room[] = [
     slug: "thinh-hao-tiny",
     // price: 0,
     images: [
+      "/images/rooms/tiny/gia tiny.jpg",
       "/images/rooms/tiny/z7086471176454_6d95e539a15516ee4506f8898d370bb7.jpg",
       "/images/rooms/tiny/z7086473372358_e027cde19d075a083927f360155c0ab5.jpg",
       "/images/rooms/tiny/z7086473372429_78ed4e9f3b3419bf3c27d91da8724dfb.jpg",
