@@ -21,3 +21,8 @@ export default function RootLayout({
   );
 }
 
+declare global {
+  interface Window {
+    zaloJSV2?: any;
+  }
+}

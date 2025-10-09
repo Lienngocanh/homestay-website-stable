@@ -142,6 +142,16 @@ const FeaturedRooms: React.FC = () => {
                     <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
                       🏙️ Ban công
                     </span>
+                   )}  
+                 {room.wifi && (
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
+                      🛜 Wifi
+                    </span>
+                   )} 
+                 {room.kitchenette && (
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
+                      🧑🏻‍🍳 Bếp
+                    </span>                                        
                   )}
                 </div>
 

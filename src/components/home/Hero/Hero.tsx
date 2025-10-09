@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-genz-navy via-genz-darkTeal to-genz-sage">
+    <section className="relative min-h-screen flex items-center justify-center pt-safe-top overflow-hidden bg-gradient-to-br from-genz-navy via-genz-darkTeal to-genz-sage">
       {/* Floating elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-bold mb-6 text-shadow-genz"
+          className="text-3xl sm:text-4xl md:text-7xl font-bold mb-6 text-shadow-genz"
         >
           <span className="block bg-gradient-to-r from-genz-cream to-genz-gold bg-clip-text text-transparent">
             Lya Homestay
@@ -123,7 +123,7 @@ const Hero: React.FC = () => {
             onClick={scrollToRooms} // Changed from window.location.href to scrollToRooms
             className="btn-accent-genz text-lg px-8 py-4 shadow-2xl"
           >
-            Đa dạng phòng
+            🏠 Đa dạng phòng
           </motion.button>
           
           <motion.button
@@ -143,14 +143,11 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="mt-12 mb-16 md:mb-8 max-w-4xl mx-auto"
         >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                🏡 Hệ thống cơ sở
-        </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: '🏢', title: 'Đội Cấn', subtitle: '2 phòng: Hard  & Soft' },
+              { icon: '🏢', title: 'Đội Cấn', subtitle: '2 phòng: Hard Room & Soft Room' },
               { icon: '✨', title: 'Kim Mã', subtitle: '3 phòng: Lya02, Lya03, Lya04' },
-              { icon: '🌟', title: 'Thịnh Hào', subtitle: '2 phòng: Ban Công & Tiny' }
+              { icon: '🌟', title: 'Thịnh Hào', subtitle: '2 phòng: Ban Cong & Tiny' }
             ].map((location, index) => (
               <motion.div
                 key={index}

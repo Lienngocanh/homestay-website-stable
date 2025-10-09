@@ -16,6 +16,9 @@ export interface Room {
   hasProjector: boolean;
   hasNetflix: boolean;
   isAvailable: boolean;
+  kitchenette?: boolean;
+  wifi?: boolean;
+  // extraBeds?: number;
   // rating: number;
   // reviewCount: number;
   features: string[];
