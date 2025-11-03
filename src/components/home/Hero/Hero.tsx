@@ -146,7 +146,7 @@ const Hero: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { icon: '🏢', title: 'Đội Cấn', subtitle: '2 phòng: Hard Room & Soft Room' },
-              { icon: '✨', title: 'Kim Mã', subtitle: '3 phòng: Lya02, Lya03, Lya04' },
+              // { icon: '✨', title: 'Kim Mã', subtitle: '3 phòng: Lya02, Lya03, Lya04' },
               { icon: '🌟', title: 'Thịnh Hào', subtitle: '2 phòng: Ban Cong & Tiny' }
             ].map((location, index) => (
               <motion.div

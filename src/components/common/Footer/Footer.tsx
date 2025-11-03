@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
 
   const locationLinks = [
     { name: 'Đội Cấn Rooms', href: '/rooms?location=doi-can', icon: BuildingOffice2Icon },
-    { name: 'Kim Mã Rooms', href: '/rooms?location=kim-ma', icon: BuildingStorefrontIcon },
+    // { name: 'Kim Mã Rooms', href: '/rooms?location=kim-ma', icon: BuildingStorefrontIcon },
     { name: 'Thịnh Hào Rooms', href: '/rooms?location=thinh-hao', icon: HomeModernIcon },
   ];
 

@@ -4,8 +4,8 @@ import { HomeStayInfo, Service } from '@/types';
 export const homestayInfo: HomeStayInfo = {
   name: "Lya Home",
   tagline: "A Little homestay in Ha Noi!",
-  description: "Homestay tự check-in ở Hà Nội với 7 phòng tại 3 cơ sở: Đội Cấn, Kim Mã, Thịnh Hào. Phong cách Gen Z, aesthetic, perfect cho staycation!",
-  address: "3 cơ sở: Đội Cấn, Kim Mã, Thịnh Hào - Hà Nội",
+  description: "Homestay tự check-in ở Hà Nội với 4 phòng tại 2 cơ sở: Đội Cấn, Thịnh Hào. Phong cách Gen Z, aesthetic, perfect cho staycation!",
+  address: "2 cơ sở: Đội Cấn, Thịnh Hào - Hà Nội",
   contact: {
     phone: "0367160515 - 0812721111",
     email: "lyahome2024@gmail.com",

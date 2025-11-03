@@ -29,7 +29,7 @@ const RoomDetail: React.FC<RoomDetailProps> = ({ room }) => {
 
   const getLocationInfo = (roomId: string) => {
     if (roomId.includes('doi-can')) return { location: 'Đội Cấn', emoji: '🏙️', description: 'Trung tâm Hà Nội' };
-    if (roomId.includes('kim-ma')) return { location: 'Kim Mã', emoji: '✨', description: 'Khu vực cao cấp' };
+    // if (roomId.includes('kim-ma')) return { location: 'Kim Mã', emoji: '✨', description: 'Khu vực cao cấp' };
     if (roomId.includes('thinh-hao')) return { location: 'Thịnh Hào', emoji: '🌟', description: 'Prime location' };
     return { location: 'Hà Nội', emoji: '📍', description: 'Central location' };
   };
