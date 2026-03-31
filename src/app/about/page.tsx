@@ -76,7 +76,7 @@ export default function AboutPage() {
                   Câu chuyện của chúng mình
                 </h2>
                 <p className="text-primary-500 mb-5 leading-relaxed">
-                  Ra đời năm 2024, LyaHome là điểm dừng chân nhỏ xinh dành cho những ai muốn tìm lại sự bình yên giữa lòng Hà Nội. Hiện tại, LyaHome có 7 phòng được chăm chút tỉ mỉ tại 2 cơ sở: Đội Cấn và Thịnh Hào — mỗi nơi mang một nét riêng nhưng đều giữ trọn tinh thần "nhà là nơi để chill".
+                  Ra đời năm 2024, LyaHome là điểm dừng chân nhỏ xinh dành cho những ai muốn tìm lại sự bình yên giữa lòng Hà Nội. Hiện tại, LyaHome có 7 phòng được chăm chút tỉ mỉ tại 2 cơ sở: Đội Cấn và Thịnh Hào — mỗi nơi mang một nét riêng nhưng đều giữ trọn tinh thần &ldquo;nhà là nơi để chill&rdquo;.
                 </p>
                 <p className="text-primary-500 leading-relaxed">
                   Từ ý tưởng đầu tiên đến khi hoàn thiện, chúng mình đã đầu tư rất nhiều tâm huyết để tạo ra những trải nghiệm khó quên cho mọi khách hàng.
