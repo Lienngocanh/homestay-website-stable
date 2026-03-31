@@ -193,7 +193,7 @@ export const rooms: Room[] = [
     slug: "thinh-hao-ban-cong",
     // price: 0,
     images: [
-      "/images/rooms/bancong/gBC.jpg",
+      "/images/rooms/bancong/giá ban công.jpg",
       "/images/rooms/bancong/z7086471150651_d2634e5cb7cad0106dd319adebf9a824.jpg",
       "/images/rooms/bancong/z7086474242650_72d28df82e22d2995c187a3ea3bdfa85.jpg",
       "/images/rooms/bancong/z7086474242806_82c49ed09a21a552fcc3bc2737d325d5.jpg",

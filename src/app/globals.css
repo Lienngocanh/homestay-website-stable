@@ -13,7 +13,7 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #1e293b;
+    color: #292524;
     background-color: #ffffff;
   }
 
@@ -21,40 +21,61 @@
     font-family: 'Inter', system-ui, sans-serif;
     font-weight: 700;
     letter-spacing: -0.025em;
-    color: #0f172a;
+    color: #1C1917;
   }
 }
 
 @layer components {
-  .btn-charcoal {
-    @apply px-6 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  .btn-base {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-[1.02] hover:shadow-md;
   }
 
   .btn-primary-charcoal {
-    @apply btn-charcoal bg-gradient-to-r from-primary-800 to-primary-700 text-white hover:shadow-primary-800/25;
+    @apply btn-base bg-primary-900 text-white hover:bg-primary-800;
   }
 
   .btn-accent-charcoal {
-    @apply btn-charcoal bg-gradient-to-r from-accent-500 to-accent-400 text-white hover:shadow-accent-500/25;
+    @apply btn-base bg-accent-600 text-white hover:bg-accent-700;
   }
 
   .btn-outline-charcoal {
-    @apply btn-charcoal border-2 border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-white;
+    @apply btn-base border-2 border-primary-800 text-primary-800 hover:bg-primary-800 hover:text-white;
+  }
+
+  /* Aliases used in Hero and RoomDetail */
+  .btn-primary-genz {
+    @apply btn-base bg-primary-900 text-white hover:bg-primary-800;
+  }
+
+  .btn-accent-genz {
+    @apply btn-base bg-accent-600 text-white hover:bg-accent-700;
   }
 
   .card-charcoal {
-    @apply bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100;
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary-100;
   }
 
   .gradient-text-charcoal {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #1C1917 0%, #44403C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Used in RoomDetail */
+  .gradient-text {
+    background: linear-gradient(135deg, #1C1917 0%, #57534E 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-shadow-charcoal {
-    text-shadow: 0 2px 8px rgba(15, 23, 42, 0.15);
+    text-shadow: 0 2px 8px rgba(28, 25, 23, 0.2);
+  }
+
+  .text-shadow-genz {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
   }
 }
 
@@ -80,42 +101,47 @@
   }
 
   .shadow-charcoal {
-    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.1);
+    box-shadow: 0 10px 40px rgba(28, 25, 23, 0.1);
+  }
+
+  /* Used in RoomDetail */
+  .shadow-genz {
+    box-shadow: 0 4px 24px rgba(28, 25, 23, 0.08);
   }
 }
 
-/* Custom scrollbar with charcoal colors */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #FAFAF9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #64748b, #94a3b8);
+  background: linear-gradient(135deg, #78716C, #A8A29E);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #475569, #64748b);
+  background: linear-gradient(135deg, #57534E, #78716C);
 }
 
-/* Selection color */
+/* Selection */
 ::selection {
-  background: #0ea5e9;
+  background: #D97706;
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background: #0ea5e9;
+  background: #D97706;
   color: #ffffff;
 }
 
-/* Smooth transitions for all interactive elements */
-* {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+/* Smooth transitions for interactive elements only */
+a, button, input, select, textarea {
+  transition-property: color, background-color, border-color, opacity, box-shadow, transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  transition-duration: 200ms;
 }

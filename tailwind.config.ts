@@ -9,60 +9,60 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary colors - Charcoal grays
+        // Warm stone neutrals
         primary: {
-          50: '#f8fafc',
-          100: '#f1f5f9', 
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',  // Main charcoal
-          800: '#1e293b',
-          900: '#0f172a',  // Darkest
-        },
-        
-        // Accent colors - Cool blues
-        accent: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',  // Sky blue accent
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          50: '#FAFAF9',
+          100: '#F5F5F4',
+          200: '#E7E5E4',
+          300: '#D6D3D1',
+          400: '#A8A29E',
+          500: '#78716C',
+          600: '#57534E',
+          700: '#44403C',
+          800: '#292524',
+          900: '#1C1917',
+          950: '#0C0A09',
         },
 
-        // Keep genz names but use charcoal-white scheme
+        // Warm amber accent
+        accent: {
+          50: '#FFFBEB',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D',
+          400: '#FBBF24',
+          500: '#F59E0B',
+          600: '#D97706',
+          700: '#B45309',
+          800: '#92400E',
+          900: '#78350F',
+        },
+
+        // genz aliases → warm values
         genz: {
-          navy: '#0f172a',      // Deep charcoal
-          darkTeal: '#1e293b',  // Dark charcoal
-          sage: '#475569',      // Medium charcoal  
-          gold: '#0ea5e9',      // Sky blue accent
-          cream: '#f8fafc'      // Almost white
-        }
+          navy: '#1C1917',
+          darkTeal: '#292524',
+          sage: '#57534E',
+          gold: '#D97706',
+          cream: '#FAFAF9',
+        },
       },
-      
+
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
         display: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Inter', 'system-ui', 'sans-serif']
+        heading: ['Inter', 'system-ui', 'sans-serif'],
       },
-      
+
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.6s ease-out',
         'bounce-slow': 'bounce 2s infinite',
         'pulse-slow': 'pulse 3s infinite',
-        'wiggle': 'wiggle 1s ease-in-out infinite',
         'float': 'float 3s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
       },
-      
+
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
@@ -72,27 +72,23 @@ const config: Config = {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
-        wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
-        },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
         },
         glow: {
-          'from': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.3)' },
-          'to': { boxShadow: '0 0 30px rgba(14, 165, 233, 0.6)' },
-        }
+          'from': { boxShadow: '0 0 20px rgba(217, 119, 6, 0.3)' },
+          'to': { boxShadow: '0 0 30px rgba(217, 119, 6, 0.6)' },
+        },
       },
-      
+
       backgroundImage: {
-        'gradient-genz': 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
-        'gradient-warm': 'linear-gradient(135deg, #0ea5e9 0%, #f8fafc 100%)', 
-        'gradient-sage': 'linear-gradient(135deg, #475569 0%, #f8fafc 100%)',
-        'gradient-ocean': 'linear-gradient(135deg, #1e293b 0%, #475569 100%)',
-        'gradient-charcoal': 'linear-gradient(135deg, #0f172a 0%, #334155 50%, #64748b 100%)',
-        'gradient-sky': 'linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%)',
+        'gradient-genz': 'linear-gradient(135deg, #1C1917 0%, #292524 100%)',
+        'gradient-warm': 'linear-gradient(135deg, #D97706 0%, #FAFAF9 100%)',
+        'gradient-sage': 'linear-gradient(135deg, #57534E 0%, #FAFAF9 100%)',
+        'gradient-ocean': 'linear-gradient(135deg, #292524 0%, #57534E 100%)',
+        'gradient-charcoal': 'linear-gradient(135deg, #1C1917 0%, #44403C 50%, #78716C 100%)',
+        'gradient-sky': 'linear-gradient(135deg, #D97706 0%, #FBBF24 100%)',
       },
 
       spacing: {
@@ -104,7 +100,7 @@ const config: Config = {
       borderRadius: {
         '4xl': '2rem',
         '5xl': '3rem',
-      }
+      },
     },
   },
   plugins: [],

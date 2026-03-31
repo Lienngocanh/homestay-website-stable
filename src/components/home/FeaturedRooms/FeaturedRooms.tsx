@@ -5,43 +5,33 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { rooms } from '@/data/rooms';
-import { StarIcon } from '@heroicons/react/24/solid';
-import { UsersIcon, HomeIcon, EyeIcon } from '@heroicons/react/24/outline';
+import { UsersIcon, HomeIcon, EyeIcon, FilmIcon, TvIcon, WifiIcon, SunIcon, FireIcon } from '@heroicons/react/24/outline';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55 } },
+};
 
 const FeaturedRooms: React.FC = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
   return (
-    <section id="featured-rooms" className="py-20 bg-gray-50">
+    <section id="featured-rooms" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-14"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
             Phòng nổi bật
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-primary-500 max-w-xl mx-auto">
             Khám phá các phòng được yêu thích nhất với đầy đủ tiện nghi hiện đại
           </p>
         </motion.div>
@@ -51,116 +41,98 @@ const FeaturedRooms: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"
         >
           {rooms.map((room) => (
             <motion.div
               key={room.id}
               variants={cardVariants}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-              whileHover={{ y: -5 }}
+              className="bg-white rounded-2xl border border-primary-100 hover:border-primary-200 hover:shadow-lg transition-all duration-300 overflow-hidden group"
+              whileHover={{ y: -4 }}
             >
-              <div className="relative h-64">
+              {/* Image */}
+              <div className="relative h-56">
                 <Image
                   src={room.thumbnail}
                   alt={room.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                
-                {/* Discount Badge */}
-                {/* {room.originalPrice && (
-                  <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                    {Math.round((1 - room.price / room.originalPrice) * 100)}% OFF
-                  </div>
-                )} */}
-
-                {/* Quick View */}
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-all duration-300 flex items-center justify-center">
                   <Link
                     href={`/rooms/${room.slug}`}
-                    className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 flex items-center hover:bg-gray-50"
+                    className="bg-white text-primary-900 px-4 py-2 rounded-lg text-sm font-semibold opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 flex items-center gap-1.5 hover:bg-primary-50"
                   >
-                    <EyeIcon className="h-4 w-4 mr-2" />
+                    <EyeIcon className="h-4 w-4" />
                     Xem chi tiết
                   </Link>
                 </div>
               </div>
-              
-              <div className="p-6">
-                {/* Header */}
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">
-                      {room.name}
-                    </h3>
-                  </div>
-                  {/* <div className="text-right">
-                    <div className="text-2xl font-bold text-primary-600">
-                      {formatPrice(room.price)}
-                    </div>
-                    {room.originalPrice && (
-                      <div className="text-sm text-gray-400 line-through">
-                        {formatPrice(room.originalPrice)}
-                      </div>
-                    )}
-                    <div className="text-sm text-gray-500">/ đêm</div>
-                  </div> */}
-                </div>
-                
+
+              <div className="p-5">
+                {/* Room name */}
+                <h3 className="text-lg font-semibold text-primary-900 mb-2">
+                  {room.name}
+                </h3>
+
                 {/* Description */}
-                <p className="text-gray-600 mb-4 line-clamp-2">
+                <p className="text-primary-500 text-sm mb-4 line-clamp-2 leading-relaxed">
                   {room.shortDescription}
                 </p>
 
                 {/* Room Info */}
-                <div className="flex items-center text-sm text-gray-500 mb-4 space-x-4">
-                  <div className="flex items-center">
-                    <UsersIcon className="h-4 w-4 mr-1" />
-                    {room.maxGuests} khách
+                <div className="flex items-center text-xs text-primary-400 mb-4 gap-4">
+                  <div className="flex items-center gap-1">
+                    <UsersIcon className="h-3.5 w-3.5" />
+                    <span>{room.maxGuests} khách</span>
                   </div>
-                  <div className="flex items-center">
-                    <HomeIcon className="h-4 w-4 mr-1" />
-                    {room.size}m²
+                  <div className="flex items-center gap-1">
+                    <HomeIcon className="h-3.5 w-3.5" />
+                    <span>{room.size}m²</span>
                   </div>
-                  <div>{room.bedType}</div>
+                  <span className="text-primary-400">{room.bedType}</span>
                 </div>
 
-                {/* Amenities */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                {/* Amenity badges */}
+                <div className="flex flex-wrap gap-1.5 mb-5">
                   {room.hasProjector && (
-                    <span className="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">
-                      🎬 Máy chiếu
+                    <span className="inline-flex items-center gap-1 text-xs bg-primary-100 text-primary-700 px-2.5 py-1 rounded-full font-medium">
+                      <FilmIcon className="h-3 w-3" />
+                      Máy chiếu
                     </span>
                   )}
                   {room.hasNetflix && (
-                    <span className="text-xs bg-red-100 text-red-800 px-2 py-1 rounded-full">
-                      📺 Netflix
+                    <span className="inline-flex items-center gap-1 text-xs bg-primary-100 text-primary-700 px-2.5 py-1 rounded-full font-medium">
+                      <TvIcon className="h-3 w-3" />
+                      Netflix
                     </span>
                   )}
                   {room.hasBalcony && (
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                      🏙️ Ban công
+                    <span className="inline-flex items-center gap-1 text-xs bg-accent-100 text-accent-700 px-2.5 py-1 rounded-full font-medium">
+                      <SunIcon className="h-3 w-3" />
+                      Ban công
                     </span>
-                   )}  
-                 {room.wifi && (
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                      🛜 Wifi
+                  )}
+                  {room.wifi && (
+                    <span className="inline-flex items-center gap-1 text-xs bg-primary-100 text-primary-700 px-2.5 py-1 rounded-full font-medium">
+                      <WifiIcon className="h-3 w-3" />
+                      Wifi
                     </span>
-                   )} 
-                 {room.kitchenette && (
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                      🧑🏻‍🍳 Bếp
-                    </span>                                        
+                  )}
+                  {room.kitchenette && (
+                    <span className="inline-flex items-center gap-1 text-xs bg-primary-100 text-primary-700 px-2.5 py-1 rounded-full font-medium">
+                      <FireIcon className="h-3 w-3" />
+                      Bếp
+                    </span>
                   )}
                 </div>
 
-                {/* Booking Button */}
+                {/* CTA */}
                 <Link
                   href={`/rooms/${room.slug}`}
-                  className="block w-full bg-gradient-to-r from-genz-navy to-genz-darkTeal hover:from-genz-darkTeal hover:to-genz-sage text-white text-center py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:scale-[1.02] shadow-lg"
+                  className="block w-full bg-primary-900 hover:bg-primary-800 text-white text-center py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:shadow-md"
                 >
-                  ✨ Xem chi tiết & đặt phòng
+                  Xem chi tiết & đặt phòng
                 </Link>
               </div>
             </motion.div>
@@ -168,15 +140,15 @@ const FeaturedRooms: React.FC = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-10"
         >
           <Link
             href="/rooms"
-            className="inline-block bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
+            className="inline-flex items-center gap-2 border border-primary-200 text-primary-700 hover:bg-primary-100 hover:border-primary-300 px-7 py-2.5 rounded-xl text-sm font-semibold transition-all"
           >
             Xem tất cả phòng
           </Link>
